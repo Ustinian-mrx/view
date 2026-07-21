@@ -1,0 +1,49 @@
+allprojects {
+    repositories {
+        maven { url "https://maven.aliyun.com/repository/google" }
+        maven { url "https://maven.aliyun.com/repository/public" }
+        maven { url "https://maven.aliyun.com/repository/gradle-plugin" }
+        google()
+        mavenCentral()
+    }
+}
+
+subprojects { project ->
+    buildscript {
+        repositories {
+            maven { url "https://maven.aliyun.com/repository/google" }
+            maven { url "https://maven.aliyun.com/repository/public" }
+            maven { url "https://maven.aliyun.com/repository/gradle-plugin" }
+            google()
+            mavenCentral()
+        }
+        configurations.all {
+            resolutionStrategy.eachDependency { details ->
+                if (details.requested.group == "com.android.tools.build" &&
+                        details.requested.name == "gradle") {
+                    details.useVersion("8.6.1")
+                    details.because("Keep Flutter plugin builds on the cached Android Gradle Plugin version.")
+                }
+            }
+        }
+    }
+}
+
+rootProject.buildDir = "../build"
+subprojects {
+    project.buildDir = "${rootProject.buildDir}/${project.name}"
+}
+subprojects {
+    afterEvaluate { project ->
+        if (project.hasProperty("android")) {
+            project.android.compileSdkVersion 36
+        }
+    }
+}
+subprojects {
+    project.evaluationDependsOn(":app")
+}
+
+tasks.register("clean", Delete) {
+    delete rootProject.buildDir
+}

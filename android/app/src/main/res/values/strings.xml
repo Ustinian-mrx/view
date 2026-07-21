@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">离线视觉辅助</string>
+
+    <!-- TalkBack 无障碍标签 -->
+    <string name="talkback_home_title">离线视觉辅助主页</string>
+    <string name="talkback_settings_button">设置按钮，双击打开辅助设置页面</string>
+    <string name="talkback_camera_preview">实时相机预览，正在检测前方目标</string>
+    <string name="talkback_loading">正在初始化相机和检测模型，请稍候</string>
+    <string name="talkback_error">初始化失败，请检查权限后重试</string>
+    <string name="talkback_retry_button">重试按钮，双击重新初始化</string>
+
+    <!-- 检测结果 -->
+    <string name="talkback_no_detection">当前未检测到目标</string>
+    <string name="talkback_detection_count">检测到%d个目标</string>
+    <string name="talkback_risk_level_safe">安全，未发现高风险目标</string>
+    <string name="talkback_risk_level_notice">注意，检测到低风险目标</string>
+    <string name="talkback_risk_level_warning">警告，请注意周围环境</string>
+    <string name="talkback_risk_level_danger">危险，请立即注意避让</string>
+
+    <!-- 设置页面 -->
+    <string name="talkback_settings_title">辅助设置页面</string>
+    <string name="talkback_voice_alert_switch">语音预警开关</string>
+    <string name="talkback_vibration_alert_switch">震动提醒开关</string>
+    <string name="talkback_test_alert_button">测试提醒按钮，双击播放测试语音和震动</string>
+    <string name="talkback_confidence_threshold">识别阈值调节</string>
+    <string name="talkback_alert_interval">播报间隔选择</string>
+
+    <!-- 目标类型 -->
+    <string name="talkback_target_obstacle">障碍物</string>
+    <string name="talkback_target_stairs">台阶</string>
+    <string name="talkback_target_traffic_light_red">红灯</string>
+    <string name="talkback_target_traffic_light_yellow">黄灯</string>
+    <string name="talkback_target_traffic_light_green">绿灯</string>
+    <string name="talkback_target_person">行人</string>
+    <string name="talkback_target_vehicle">车辆</string>
+    <string name="talkback_target_tactile_paving">盲道</string>
+</resources>

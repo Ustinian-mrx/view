@@ -1,0 +1,4 @@
+# Copy this file to android/local.properties and replace both paths.
+# Android Studio can show the Flutter path in Settings > Languages & Frameworks > Flutter.
+flutter.sdk=C:\\path\\to\\flutter
+sdk.dir=C:\\Users\\your_name\\AppData\\Local\\Android\\Sdk

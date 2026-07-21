@@ -1,0 +1,11 @@
+{
+  "input_size": 640,
+  "letterbox": true,
+  "color_space": "RGB",
+  "normalize": "0-1",
+  "conf_thres": 0.25,
+  "iou_thres": 0.7,
+  "max_det": 300,
+  "low_light_method": "none",
+  "notes": "Current release is FP32 NCNN for integration. INT8 quantization pending calibrated dataset."
+}

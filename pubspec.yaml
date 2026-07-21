@@ -1,0 +1,33 @@
+name: vision_guard
+description: Offline real-time visual assistance for visually impaired users.
+publish_to: "none"
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.3.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  camera: 0.11.0+2
+  flutter_tts: ^4.0.2
+  permission_handler: ^11.3.1
+  vibration: ^3.1.8
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+dependency_overrides:
+  camera_android_camerax: 0.6.10
+  flutter_plugin_android_lifecycle:
+    path: third_party/flutter_plugin_android_lifecycle
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/models/yolo_blind_assist.param
+    - assets/models/yolo_blind_assist.bin
+    - assets/models/classes.txt
+    - assets/models/preprocess.json

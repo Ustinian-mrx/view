@@ -1,11 +1,19 @@
-.dart_tool/
-.flutter-plugins
-.flutter-plugins-dependencies
-.packages
-build/
-android/.gradle/
-android/local.properties
-android/app/build/
-ios/Flutter/Generated.xcconfig
-ios/Flutter/flutter_export_environment.sh
+# 编译生成的文件（最大头，必须忽略）
+/build
+/app/build
+/.gradle
+
+# IDE 配置文件（每个开发者电脑不同，忽略）
+/.idea
 *.iml
+/.vscode
+.DS_Store
+
+# 本地配置文件（含你的 SDK 路径，不能传）
+local.properties
+
+# C++ NDK 编译中间文件（你用了 ncnn，编译缓存很大）
+.cxx
+.externalNativeBuild
+*.so
+*.o

@@ -1,19 +1,44 @@
-# 编译生成的文件（最大头，必须忽略）
-/build
-/app/build
-/.gradle
+# Flutter / Dart generated files
+/.dart_tool/
+/.packages
+/.flutter-plugins
+/.flutter-plugins-dependencies
+/build/
+/coverage/
 
-# IDE 配置文件（每个开发者电脑不同，忽略）
-/.idea
+# Android / Gradle generated files
+**/.gradle/
+**/.kotlin/
+**/build/
+**/.cxx/
+**/.externalNativeBuild/
+*.apk
+*.aab
+*.apks
+
+# Machine-local SDK and signing configuration
+**/local.properties
+android/key.properties
+*.jks
+*.keystore
+
+# IDE and operating-system files
+/.idea/
+/.vscode/
 *.iml
-/.vscode
 .DS_Store
+Thumbs.db
+Desktop.ini
 
-# 本地配置文件（含你的 SDK 路径，不能传）
-local.properties
+# Logs, temporary files and crash dumps
+*.log
+*.tmp
+*.temp
+*.bak
+*.swp
+*.hprof
+hs_err_pid*
 
-# C++ NDK 编译中间文件（你用了 ncnn，编译缓存很大）
-.cxx
-.externalNativeBuild
-*.so
-*.o
+# Keep source-controlled NCNN runtime and model assets.
+!android/app/src/main/jniLibs/arm64-v8a/libncnn.so
+!assets/models/*.bin

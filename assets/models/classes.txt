@@ -1,10 +1,18 @@
-person
-rider
-car
-bus
-truck
-bike
-motor
-traffic light
-traffic sign
-train
+0	0
+1	Blind-road
+2	Child-Pedestrian Crossing
+3	Give Way
+4	Speed Limit
+5	Stop
+6	Truck
+7	bike
+8	bus
+9	car
+10	green
+11	helmet
+12	motorcycle
+13	person
+14	railway
+15	red
+16	train
+17	yellow
